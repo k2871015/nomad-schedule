@@ -273,6 +273,24 @@ body {
 }
 .rate { color: var(--accent-green); font-weight: 600; }
 
+/* ===== Navigation & Footer Links ===== */
+.top-nav {
+    display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; padding: 1rem;
+}
+.top-nav a {
+    color: var(--text-muted); text-decoration: none; font-size: 1rem; font-weight: 600; font-family: var(--font-heading); transition: color 0.3s;
+}
+.top-nav a:hover { color: var(--accent-blue); }
+
+.footer-nav {
+    display: flex; justify-content: center; gap: 1rem; margin-bottom: 1.2rem; align-items: center;
+}
+.footer-nav a {
+    color: var(--text-muted); text-decoration: none; font-size: 0.85rem; transition: color 0.3s;
+}
+.footer-nav a:hover { color: var(--accent-blue); }
+.footer-nav .divider { color: var(--border-color); font-size: 0.85rem; }
+
 /* Footer */
 .dashboard-footer {
     text-align: center;
