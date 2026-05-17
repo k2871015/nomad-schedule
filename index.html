@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neo-Nomad Dashboard | Premium Focus Space</title>
+    <meta name="description" content="The ultimate premium dashboard for digital nomads. Stay focused, stay global.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts: Inter & Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3114463937796990" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="aura-background"></div>
+    
+    <main class="dashboard-container">
+        <!-- Header Section: Greeting & World Clock -->
+        <header class="dashboard-header glass">
+            <div class="greeting-area">
+                <h1 id="greeting">Good Morning, Nomad</h1>
+                <p id="daily-quote">"The world is your office. Make it count."</p>
+            </div>
+            <div class="main-clock-area">
+                <div id="main-time" class="time-display">00:00:00</div>
+                <div id="main-date" class="date-display">Saturday, May 16</div>
+            </div>
+        </header>
+
+        <!-- Premium AdSense Leaderboard Placeholder -->
+        <div class="adsense-placeholder leaderboard glass">
+            <span class="ad-label">Premium Sponsor</span>
+            <div class="ad-content">Your Brand Here</div>
+        </div>
+
+        <section class="dashboard-grid">
+            <!-- World Times Card -->
+            <div class="card glass" id="world-times-card">
+                <h3><span class="icon">🌍</span> World Times</h3>
+                <div class="timezone-list" id="timezone-list">
+                    <!-- Dynamic Content -->
+                </div>
+            </div>
+
+            <!-- Weather Card -->
+            <div class="card glass" id="weather-card">
+                <h3><span class="icon">🌤️</span> Current Vibes</h3>
+                <div class="weather-content">
+                    <div class="temp-main" id="temp">24°C</div>
+                    <div class="weather-info">
+                        <span id="location">Seoul, KR</span>
+                        <span id="condition">Mostly Sunny</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Premium AdSense Grid Placeholder -->
+            <div class="card glass adsense-placeholder grid-ad">
+                <span class="ad-label">Sponsor</span>
+                <div class="ad-content">Discover More</div>
+            </div>
+
+            <!-- Focus Missions (Todo) -->
+            <div class="card glass large" id="todo-card">
+                <h3><span class="icon">🎯</span> Focus Missions</h3>
+                <form id="todo-form">
+                    <input type="text" id="todo-input" placeholder="What's your next move?" autocomplete="off">
+                </form>
+                <ul id="todo-list">
+                    <!-- Dynamic Content -->
+                </ul>
+            </div>
+
+            <!-- Currency/Finance Card -->
+            <div class="card glass" id="finance-card">
+                <h3><span class="icon">💹</span> Currency Pulse</h3>
+                <div class="currency-list" id="currency-list">
+                    <div class="currency-item"><span>USD/KRW</span> <span class="rate">1,354.2</span></div>
+                    <div class="currency-item"><span>EUR/USD</span> <span class="rate">1.082</span></div>
+                    <div class="currency-item"><span>BTC/USD</span> <span class="rate">66,420</span></div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="dashboard-footer">
+            <p>&copy; 2026 Neo-Nomad Dashboard. Built by Yu Manager for CEO.</p>
+        </footer>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
