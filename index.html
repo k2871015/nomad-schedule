@@ -47,6 +47,7 @@
                 <a href="#todo-card">Focus Missions</a>
                 <a href="guide.html">Guides</a>
                 <a href="about.html">About</a>
+                <a href="#community">Lounge</a>
             </div>
         </nav>
 
@@ -148,8 +149,6 @@
                         — London (GMT+1), San Francisco (GMT-7), and Tokyo (GMT+9) — simultaneously. Before scheduling
                         any synchronous meeting, check all relevant clocks. Tools like World Time Buddy or simply adding
                         multiple clocks to your phone settings can save hours of confusion and embarrassment.
-                    </p>
-                    <p>
                         Pro tip: When traveling between time zones, give yourself a 48-hour adjustment period. Avoid
                         scheduling demanding intellectual work or high-stakes client calls during your first two days in
                         a new timezone. Your cognitive performance will thank you.
@@ -302,11 +301,37 @@
             </div>
         </section>
 
+        <!-- ===== COMMUNITY DISCUSSION (DISQUS) ===== -->
+        <section class="content-section glass" id="community" aria-label="Nomad Community Lounge">
+            <h2 class="section-title">💬 Nomad Lounge</h2>
+            <p class="section-intro">
+                Connect with fellow digital nomads, share workspace recommendations, ask questions, or coordinate café sessions.
+            </p>
+            <div class="disqus-container">
+                <div id="disqus_thread"></div>
+                <script>
+                    var disqus_config = function () {
+                        this.page.url = 'https://nomad-schedule.pages.dev/';
+                        this.page.identifier = 'nomad-schedule-home';
+                    };
+                    (function() {
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://https-nomad-schedule-pages-dev-world-times-card.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+        </section>
+
         <footer class="dashboard-footer">
             <div class="footer-nav">
                 <a href="about.html">About</a>
                 <span class="divider">|</span>
                 <a href="guide.html">Guides</a>
+                <span class="divider">|</span>
+                <a href="#community">Lounge</a>
                 <span class="divider">|</span>
                 <a href="terms.html">Terms of Service</a>
                 <span class="divider">|</span>

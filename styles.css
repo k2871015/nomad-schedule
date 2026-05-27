@@ -150,8 +150,9 @@ body {
 /* Grid Layout */
 .dashboard-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1.8fr 1.2fr;
     gap: var(--spacing-lg);
+    align-items: start;
 }
 
 .card {
@@ -178,8 +179,8 @@ body {
 }
 
 .card.large {
-    grid-column: span 2;
-    grid-row: span 2;
+    grid-column: 1;
+    grid-row: span 3;
 }
 
 /* Timezone List */
@@ -401,15 +402,15 @@ body {
 
 /* Responsive */
 @media (max-width: 1024px) {
-    .dashboard-grid { grid-template-columns: repeat(2, 1fr); }
-    .card.large { grid-column: span 2; }
+    .dashboard-grid { grid-template-columns: 1fr; }
+    .card.large { grid-column: span 1; grid-row: span 1; }
 }
 
 @media (max-width: 640px) {
     .dashboard-header { flex-direction: column; text-align: center; gap: var(--spacing-md); }
     .main-clock-area { text-align: center; margin-top: 0; }
     .dashboard-grid { grid-template-columns: 1fr; }
-    .card.large { grid-column: span 1; }
+    .card.large { grid-column: span 1; grid-row: span 1; }
     .top-nav { flex-direction: column; text-align: center; gap: var(--spacing-sm); border-radius: var(--radius-lg); }
 }
 
@@ -715,4 +716,16 @@ body {
     #cookie-accept-btn {
         width: 100%;
     }
+}
+
+/* Disqus Thread Container */
+.disqus-container {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: rgba(20, 20, 30, 0.4);
+    border: 1px solid var(--colors-border-light);
+    border-radius: var(--radius-md);
+    backdrop-filter: var(--backdrop-blur-sm);
+    -webkit-backdrop-filter: var(--backdrop-blur-sm);
+    width: 100%;
 }
