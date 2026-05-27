@@ -3,24 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neo-Nomad Dashboard | Premium Focus Space</title>
-    <meta name="description" content="The ultimate premium dashboard for digital nomads. Stay focused, stay global.">
-    <link rel="stylesheet" href="styles.css">
-    <!-- Google Fonts: Inter & Outfit -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Neo-Nomad Dashboard | Productivity Tools for Digital Nomads</title>
+    <meta name="description" content="Neo-Nomad Dashboard helps digital nomads track world times, manage focus tasks, and stay productive from anywhere. Free productivity tools for remote workers.">
+    <meta name="keywords" content="digital nomad, productivity dashboard, world clock, remote work, time zones, focus timer, nomad tools">
+    <meta name="author" content="Neo-Nomad Team">
+    <link rel="canonical" href="https://nomad-schedule.pages.dev/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Neo-Nomad Dashboard | Productivity Tools for Digital Nomads">
+    <meta property="og:description" content="Free productivity dashboard for digital nomads. Track world times, manage daily missions, and work from anywhere.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nomad-schedule.pages.dev/">
+    <meta property="og:site_name" content="Neo-Nomad Dashboard">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Neo-Nomad Dashboard">
+    <meta name="twitter:description" content="Productivity tools built for the modern digital nomad lifestyle.">
+
     <!-- Google AdSense -->
     <meta name="google-adsense-account" content="ca-pub-3114463937796990">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3114463937796990" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts: Inter & Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookie-banner">
+        <p>We use cookies to enhance your experience and display personalized ads. By continuing to use this site, you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
+        <button id="cookie-accept-btn" onclick="acceptCookies()">Accept</button>
+    </div>
+
     <div class="aura-background"></div>
-    
+
     <main class="dashboard-container">
         <!-- Navigation Menu -->
         <nav class="top-nav glass" id="top">
-            <a href="#top">Dashboard</a>
-            <a href="#world-times-card">World Times</a>
-            <a href="#todo-card">Focus Missions</a>
+            <a href="#top" class="nav-logo">Neo-Nomad</a>
+            <div class="nav-links">
+                <a href="#world-times-card">World Times</a>
+                <a href="#todo-card">Focus Missions</a>
+                <a href="guide.html">Guides</a>
+                <a href="about.html">About</a>
+            </div>
         </nav>
 
         <!-- Header Section: Greeting & World Clock -->
@@ -31,20 +58,25 @@
             </div>
             <div class="main-clock-area">
                 <div id="main-time" class="time-display">00:00:00</div>
-                <div id="main-date" class="date-display">Saturday, May 16</div>
+                <div id="main-date" class="date-display">Loading...</div>
             </div>
         </header>
 
-        <!-- Premium AdSense Leaderboard Placeholder -->
-        <div class="adsense-placeholder leaderboard glass">
-            <span class="ad-label">Premium Sponsor</span>
-            <div class="ad-content">Your Brand Here</div>
+        <!-- AdSense Auto Ad — banner position (real unit) -->
+        <div class="adsense-unit">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-3114463937796990"
+                 data-ad-slot="auto"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
 
         <section class="dashboard-grid">
             <!-- World Times Card -->
             <div class="card glass" id="world-times-card">
-                <h3><span class="icon">🌍</span> World Times</h3>
+                <h2 class="card-heading"><span class="icon">🌍</span> World Times</h2>
                 <div class="timezone-list" id="timezone-list">
                     <!-- Dynamic Content -->
                 </div>
@@ -52,7 +84,7 @@
 
             <!-- Weather Card -->
             <div class="card glass" id="weather-card">
-                <h3><span class="icon">🌤️</span> Current Vibes</h3>
+                <h2 class="card-heading"><span class="icon">🌤️</span> Current Vibes</h2>
                 <div class="weather-content">
                     <div class="temp-main" id="temp">24°C</div>
                     <div class="weather-info">
@@ -62,15 +94,9 @@
                 </div>
             </div>
 
-            <!-- Premium AdSense Grid Placeholder -->
-            <div class="card glass adsense-placeholder grid-ad">
-                <span class="ad-label">Sponsor</span>
-                <div class="ad-content">Discover More</div>
-            </div>
-
             <!-- Focus Missions (Todo) -->
             <div class="card glass large" id="todo-card">
-                <h3><span class="icon">🎯</span> Focus Missions</h3>
+                <h2 class="card-heading"><span class="icon">🎯</span> Focus Missions</h2>
                 <form id="todo-form">
                     <input type="text" id="todo-input" placeholder="What's your next move?" autocomplete="off">
                 </form>
@@ -81,52 +107,215 @@
 
             <!-- Currency/Finance Card -->
             <div class="card glass" id="finance-card">
-                <h3><span class="icon">💹</span> Currency Pulse</h3>
+                <h2 class="card-heading"><span class="icon">💹</span> Currency Pulse</h2>
                 <div class="currency-list" id="currency-list">
                     <div class="currency-item"><span>USD/KRW</span> <span class="rate">1,354.2</span></div>
                     <div class="currency-item"><span>EUR/USD</span> <span class="rate">1.082</span></div>
                     <div class="currency-item"><span>BTC/USD</span> <span class="rate">66,420</span></div>
+                    <div class="currency-item"><span>JPY/USD</span> <span class="rate">0.0065</span></div>
                 </div>
+                <p class="card-note">Reference rates. Always verify with your bank or exchange service before transacting.</p>
             </div>
         </section>
 
-        <!-- ===== NOMAD GUIDE SECTION ===== -->
-        <section class="card glass nomad-guide-section" id="nomad-guide" style="margin-top: var(--spacing-xl); padding: var(--spacing-lg);">
-            <h3 style="color: var(--colors-accent); font-family: var(--font-heading); font-size: 18px; margin-bottom: var(--spacing-md); text-transform: uppercase;">🌍 Neo-Nomad Work & Focus Guide</h3>
-            <p style="color: var(--colors-text-secondary); font-size: 14px; line-height: 1.6; margin-bottom: var(--spacing-md);">
-                Embracing the digital nomad lifestyle means managing your own time and workspace. To help you maintain maximum focus while exploring new cultures and timezones, we have compiled three essential habits for modern remote workers:
+        <!-- ===== DEEP CONTENT: NOMAD GUIDE SECTION ===== -->
+        <section class="content-section glass" id="nomad-guide" aria-label="Digital Nomad Work Guide">
+            <h2 class="section-title">🌍 The Complete Digital Nomad Work &amp; Focus Guide</h2>
+            <p class="section-intro">
+                Whether you're working from a café in Bali, a co-working space in Lisbon, or a rooftop in Mexico City,
+                the challenge of staying productive across time zones, currencies, and cultural boundaries is real.
+                This guide distills the most important habits and tools for sustaining a thriving digital nomad career
+                in 2026 and beyond.
             </p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-md); margin-top: var(--spacing-md);">
-                <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--colors-border-light); padding: var(--spacing-md); border-radius: var(--radius-md);">
-                    <h4 style="color: var(--colors-primary); font-size: 15px; margin-bottom: var(--spacing-sm); font-family: var(--font-heading);">🕒 1. Master Timezone Management</h4>
-                    <p style="color: var(--colors-text-muted); font-size: 13px; line-height: 1.5;">
-                        Always align your core hours with your clients or team. Use our World Times widget to monitor regional hours in major startup hubs like London, San Francisco, and Tokyo before scheduling meetings to avoid mid-night calls.
+
+            <div class="guide-grid">
+                <!-- Guide 1 -->
+                <article class="guide-card" id="guide-timezone">
+                    <h3>🕒 Mastering Timezone Management as a Digital Nomad</h3>
+                    <p>
+                        One of the biggest challenges for digital nomads is managing professional obligations across multiple
+                        time zones. Missing a client call because you miscalculated the offset between your current city and
+                        their headquarters can damage trust and cost you work.
                     </p>
+                    <p>
+                        The most effective strategy is to establish a set of "anchor hours" — a 3-to-4 hour daily window
+                        that overlaps with your primary clients or team, regardless of where you are physically located.
+                        During these anchor hours, you remain available and responsive. Outside of them, you work
+                        asynchronously and respect your own boundaries.
+                    </p>
+                    <p>
+                        Use the <strong>World Times widget</strong> on this dashboard to monitor key startup hubs
+                        — London (GMT+1), San Francisco (GMT-7), and Tokyo (GMT+9) — simultaneously. Before scheduling
+                        any synchronous meeting, check all relevant clocks. Tools like World Time Buddy or simply adding
+                        multiple clocks to your phone settings can save hours of confusion and embarrassment.
+                    </p>
+                    <p>
+                        Pro tip: When traveling between time zones, give yourself a 48-hour adjustment period. Avoid
+                        scheduling demanding intellectual work or high-stakes client calls during your first two days in
+                        a new timezone. Your cognitive performance will thank you.
+                    </p>
+                </article>
+
+                <!-- Guide 2 -->
+                <article class="guide-card" id="guide-focus">
+                    <h3>🎯 Building a Daily Focus System That Works Anywhere</h3>
+                    <p>
+                        Productivity without structure quickly collapses when you're surrounded by distractions — a
+                        beautiful beach, a noisy hostel common room, or an unplanned adventure with fellow nomads.
+                        The antidote is a repeatable daily focus system that requires almost no willpower to maintain.
+                    </p>
+                    <p>
+                        The <strong>Focus Missions</strong> widget on this dashboard uses the browser's LocalStorage to
+                        save your tasks without any account signup or server dependency. Your to-dos persist even after
+                        you close the tab. This is intentional: your task list should be frictionless to access, modify,
+                        and commit to.
+                    </p>
+                    <p>
+                        Research in behavioral psychology consistently shows that limiting your active task list to
+                        three to five items dramatically improves task completion rates. Rather than a long, aspirational
+                        backlog, maintain a short, honest list of the most critical moves for today. The sense of
+                        completion when you check off all your daily missions is itself a powerful motivational reward.
+                    </p>
+                    <p>
+                        Pair your task list with time-blocking: assign each mission a specific time slot, and protect
+                        those slots with the same discipline you'd apply to a client meeting. Treat interruptions during
+                        deep-work blocks as declining an invitation — politely but firmly.
+                    </p>
+                </article>
+
+                <!-- Guide 3 -->
+                <article class="guide-card" id="guide-burnout">
+                    <h3>💆 Preventing Nomad Burnout: The Hidden Risk of Location Freedom</h3>
+                    <p>
+                        The digital nomad lifestyle is often portrayed as a continuous highlight reel of sunsets and
+                        co-working cafés. The reality includes loneliness, decision fatigue, logistical overhead,
+                        and the paradox of being "always on" because your office has no closing time.
+                    </p>
+                    <p>
+                        Burnout among digital nomads is disproportionately high compared to traditional office workers.
+                        A 2023 survey by Remote Year found that 58% of nomads had experienced professional burnout,
+                        with isolation and lack of routine cited as the top contributing factors.
+                    </p>
+                    <p>
+                        Prevention strategies that actually work include: establishing location-agnostic rituals
+                        (morning workouts, meditation, a consistent start-time regardless of timezone), building a
+                        virtual community with other nomads through Slack groups or Discord servers, and — critically —
+                        enforcing strict offline hours where you genuinely disconnect from screens and work-related thought.
+                    </p>
+                    <p>
+                        Use the weather and currency widgets on this dashboard not just for logistics, but as a
+                        mindfulness prompt: you are somewhere in the world, right now, with local weather and local
+                        life happening around you. Step outside. Engage with your surroundings. Work to live, not the
+                        inverse.
+                    </p>
+                </article>
+
+                <!-- Guide 4 -->
+                <article class="guide-card" id="guide-finance">
+                    <h3>💹 The Nomad's Financial Toolkit: Currency, Tax &amp; Cost of Living</h3>
+                    <p>
+                        Financial management is where many new digital nomads stumble. Currency fluctuations, foreign
+                        transaction fees, tax residency confusion, and wildly varying costs of living across destinations
+                        can erode income faster than most people expect.
+                    </p>
+                    <p>
+                        Start with a baseline: track your monthly spending across three categories — accommodation
+                        (typically 40–50% of budget), food and lifestyle (25–35%), and work tools and transport (15–20%).
+                        The <strong>Currency Pulse</strong> widget on this dashboard gives you reference exchange rates
+                        for the most common nomad currency pairs.
+                    </p>
+                    <p>
+                        For banking, multi-currency accounts like Wise (formerly TransferWise), Revolut, or Charles
+                        Schwab's global debit card dramatically reduce the transaction fees that eat traditional bank
+                        accounts. Never withdraw cash from an airport ATM unless absolutely necessary — the fees and
+                        exchange rates are reliably the worst you'll encounter.
+                    </p>
+                    <p>
+                        On the tax side: the "I travel full-time so I don't pay taxes" myth is dangerously false.
+                        Tax residency is determined by your country of citizenship, the length of your stays, and where
+                        you earn income — and the rules differ dramatically between countries. Consult a tax professional
+                        who specializes in digital nomad or expat taxation before committing to the lifestyle full-time.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- AdSense in-content unit -->
+        <div class="adsense-unit adsense-mid">
+            <ins class="adsbygoogle"
+                 style="display:block; text-align:center;"
+                 data-ad-client="ca-pub-3114463937796990"
+                 data-ad-slot="auto"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <!-- ===== QUICK TIPS SECTION ===== -->
+        <section class="content-section glass" id="quick-tips" aria-label="Quick Productivity Tips">
+            <h2 class="section-title">⚡ Quick Productivity Tips for Nomads</h2>
+            <ul class="tips-list">
+                <li><strong>Start every morning with a dashboard check.</strong> Review your time zones, set 3 missions for the day, and check the weather before planning any outdoor work sessions.</li>
+                <li><strong>Use the Pomodoro Technique in 25-minute sprints.</strong> Work intensely for 25 minutes, then take a 5-minute break. After four cycles, take a 20-minute longer break.</li>
+                <li><strong>Keep your task list honest, not aspirational.</strong> Only add tasks you genuinely intend to complete today. An honest short list beats a fantasy long list every time.</li>
+                <li><strong>Time-block your anchor hours.</strong> Mark your client overlap window in a shared calendar so colleagues know when you're reliably available.</li>
+                <li><strong>Build a "minimum viable workspace" kit.</strong> A quality noise-cancelling headset, a portable laptop stand, and a travel power strip can turn almost any environment into a productive office.</li>
+                <li><strong>Review currency rates before withdrawing cash.</strong> Even a 2% difference in exchange rates on a $500 withdrawal costs you $10. Over a year, that adds up significantly.</li>
+                <li><strong>Schedule a weekly review.</strong> Every Sunday, review what you completed, what you deferred, and what you learned. Adjust your approach before the new week begins.</li>
+                <li><strong>Protect your sleep schedule ruthlessly.</strong> Jet lag and irregular sleep are the enemies of cognitive performance. Prioritize consistent sleep timing above almost everything else.</li>
+            </ul>
+        </section>
+
+        <!-- ===== TOP NOMAD DESTINATIONS ===== -->
+        <section class="content-section glass" id="destinations" aria-label="Top Nomad Destinations 2026">
+            <h2 class="section-title">🗺️ Top Digital Nomad Destinations in 2026</h2>
+            <p class="section-intro">
+                Choosing where to base yourself as a nomad involves balancing cost, connectivity, timezone alignment,
+                visa requirements, and quality of life. Here are the cities that consistently rank highest across
+                all those dimensions in 2026.
+            </p>
+            <div class="destinations-grid">
+                <div class="dest-card">
+                    <h3>🇵🇹 Lisbon, Portugal</h3>
+                    <p>Western Europe timezone (CET-1) aligns well with US East Coast mornings and UK business hours. Fast fiber internet, a well-established nomad community, and a comparatively affordable cost of living for a European capital make Lisbon a perennial favorite. The D8 Digital Nomad Visa makes legal residency accessible.</p>
                 </div>
-                <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--colors-border-light); padding: var(--spacing-md); border-radius: var(--radius-md);">
-                    <h4 style="color: var(--colors-primary); font-size: 15px; margin-bottom: var(--spacing-sm); font-family: var(--font-heading);">🎯 2. Define Daily Focus Missions</h4>
-                    <p style="color: var(--colors-text-muted); font-size: 13px; line-height: 1.5;">
-                        Break down your goals into actionable daily to-do lists. Keep your active list short (3-5 key tasks) to avoid overwhelm. Check them off as you go, and let browser localStorage keep track of your daily progress.
-                    </p>
+                <div class="dest-card">
+                    <h3>🇹🇭 Chiang Mai, Thailand</h3>
+                    <p>Often called the original digital nomad capital, Chiang Mai offers an exceptional combination of extremely low cost of living, reliable co-working infrastructure, and a deeply established expat and nomad community. Southeast Asian timezone (GMT+7) works well for East Asian and Australian clients.</p>
                 </div>
-                <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--colors-border-light); padding: var(--spacing-md); border-radius: var(--radius-md);">
-                    <h4 style="color: var(--colors-primary); font-size: 15px; margin-bottom: var(--spacing-sm); font-family: var(--font-heading);">💆‍♂️ 3. Prevent Nomad Burnout</h4>
-                    <p style="color: var(--colors-text-muted); font-size: 13px; line-height: 1.5;">
-                        Working in new environments can disrupt your routines. Simulate local vibes, track financial shifts in currency rates, and set aside dedicated offline hours to rest, stretch, and step away from your digital dashboard.
-                    </p>
+                <div class="dest-card">
+                    <h3>🇮🇩 Bali, Indonesia</h3>
+                    <p>Canggu and Ubud have transformed into world-class nomad hubs with fast internet, stunning scenery, and a thriving creative community. The GMT+8 timezone sits conveniently between Asian and Australian markets. Costs remain low outside of peak tourist season.</p>
+                </div>
+                <div class="dest-card">
+                    <h3>🇲🇽 Mexico City, Mexico</h3>
+                    <p>CDMX has seen explosive nomad growth since 2021. The Central Time timezone is ideal for anyone serving US clients. The city offers world-class food, culture, architecture, and a cost of living roughly 50–60% lower than comparable US metros. Colonia Condesa and Roma Norte are the primary nomad zones.</p>
+                </div>
+                <div class="dest-card">
+                    <h3>🇬🇪 Tbilisi, Georgia</h3>
+                    <p>Georgia offers a 365-day visa-free stay for most nationalities under its "Remotely from Georgia" program, a flat 1% income tax for registered individual entrepreneurs, fast internet, and extremely affordable living costs. The GMT+4 timezone spans European and Asian business hours comfortably.</p>
+                </div>
+                <div class="dest-card">
+                    <h3>🇰🇷 Seoul, South Korea</h3>
+                    <p>Seoul consistently ranks among the world's fastest internet cities, with gigabit fiber available in most apartments and co-working spaces. The city's infrastructure is world-class, public transport is exceptional, and the food scene is extraordinary. GMT+9 aligns perfectly with Japanese and Australian market hours.</p>
                 </div>
             </div>
         </section>
 
         <footer class="dashboard-footer">
             <div class="footer-nav">
+                <a href="about.html">About</a>
+                <span class="divider">|</span>
+                <a href="guide.html">Guides</a>
+                <span class="divider">|</span>
                 <a href="terms.html">Terms of Service</a>
                 <span class="divider">|</span>
                 <a href="privacy.html">Privacy Policy</a>
                 <span class="divider">|</span>
-                <a href="https://github.com/k2871015/nomad-schedule/issues/new" target="_blank">Contact Us</a>
+                <a href="about.html#contact">Contact</a>
             </div>
-            <p>&copy; 2026 Neo-Nomad Dashboard. Built by Yu Manager for CEO.</p>
+            <p>&copy; 2026 Neo-Nomad Dashboard. All rights reserved.</p>
+            <p style="font-size:0.75rem; margin-top:0.25rem; opacity:0.6;">Currency rates shown are reference rates only. Verify with official sources before any financial transaction.</p>
         </footer>
     </main>
 
