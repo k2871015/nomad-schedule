@@ -115,22 +115,22 @@
             <div class="contact-grid">
                 <!-- Formspree Contact Form -->
                 <div class="contact-form-container">
-                    <form id="contact-form" class="contact-form">
+                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/mojbkrng" method="POST">
                         <div class="form-group">
                             <label for="contact-name">Name</label>
-                            <input type="text" id="contact-name" name="name" data-fs-field placeholder="Your Name" autocomplete="name" />
+                            <input type="text" id="contact-name" name="name" placeholder="Your Name" autocomplete="name" />
                             <span class="error-message" data-fs-error="name"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="contact-email">Email Address</label>
-                            <input type="email" id="contact-email" name="email" data-fs-field placeholder="your.email@example.com" autocomplete="email" required />
+                            <input type="email" id="contact-email" name="email" placeholder="your.email@example.com" autocomplete="email" required />
                             <span class="error-message" data-fs-error="email"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="contact-topic">Topic</label>
-                            <select id="contact-topic" name="topic" data-fs-field>
+                            <select id="contact-topic" name="topic">
                                 <option value="General Inquiry">General Inquiry</option>
                                 <option value="Bug Report">Feedback / Bug Report</option>
                                 <option value="Feature Request">Feature Request</option>
@@ -141,20 +141,20 @@
 
                         <div class="form-group">
                             <label for="contact-message">Message</label>
-                            <textarea id="contact-message" name="message" data-fs-field placeholder="How can we help you?" required></textarea>
+                            <textarea id="contact-message" name="message" placeholder="How can we help you?" required></textarea>
                             <span class="error-message" data-fs-error="message"></span>
                         </div>
 
                         <div class="form-messages">
-                            <div class="form-success-container" data-fs-success>
+                            <div class="form-success-container" id="contact-success-msg" style="display: none; padding: 0.8rem; border-radius: 8px; background: rgba(52, 211, 153, 0.1); border: 1px solid var(--green); color: var(--green); margin-bottom: 1rem; font-size: 0.85rem;">
                                 🎉 Thank you! Your message has been sent successfully. We'll get back to you soon.
                             </div>
-                            <div class="form-error-container" data-fs-error>
+                            <div class="form-error-container" id="contact-error-msg" style="display: none; padding: 0.8rem; border-radius: 8px; background: rgba(239, 68, 68, 0.1); border: 1px solid var(--coral); color: var(--coral); margin-bottom: 1rem; font-size: 0.85rem;">
                                 ❌ Oops! There was a problem submitting your form. Please try again.
                             </div>
                         </div>
 
-                        <button type="submit" class="submit-btn" data-fs-submit-btn>Send Message</button>
+                        <button type="submit" class="submit-btn">Send Message</button>
                     </form>
                 </div>
 
@@ -187,10 +187,63 @@
 
         <!-- Formspree Scripts -->
         <script>
-            window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-            formspree('initForm', { formElement: '#contact-form', formId: 'mojbkrng' });
+            document.addEventListener('DOMContentLoaded', () => {
+                const contactForm = document.getElementById('contact-form');
+                if (contactForm) {
+                    contactForm.addEventListener('submit', async (e) => {
+                        e.preventDefault();
+                        
+                        const submitBtn = contactForm.querySelector('.submit-btn');
+                        const successMsg = document.getElementById('contact-success-msg');
+                        const errorMsg = document.getElementById('contact-error-msg');
+                        
+                        // Reset status
+                        successMsg.style.display = 'none';
+                        errorMsg.style.display = 'none';
+                        contactForm.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+                        
+                        // Button Loading State
+                        const originalText = submitBtn.textContent;
+                        submitBtn.disabled = true;
+                        submitBtn.textContent = 'Sending...';
+                        
+                        const formData = new FormData(contactForm);
+                        
+                        try {
+                            const response = await fetch(contactForm.action, {
+                                method: 'POST',
+                                body: formData,
+                                headers: {
+                                    'Accept': 'application/json'
+                                }
+                            });
+                            
+                            if (response.ok) {
+                                successMsg.style.display = 'block';
+                                contactForm.reset();
+                            } else {
+                                const result = await response.json();
+                                if (result.errors) {
+                                    result.errors.forEach(err => {
+                                        const errSpan = contactForm.querySelector(`[data-fs-error="${err.field}"]`);
+                                        if (errSpan) {
+                                            errSpan.textContent = err.message;
+                                        }
+                                    });
+                                }
+                                errorMsg.style.display = 'block';
+                            }
+                        } catch (err) {
+                            console.error('Submission error:', err);
+                            errorMsg.style.display = 'block';
+                        } finally {
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = originalText;
+                        }
+                    });
+                }
+            });
         </script>
-        <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
         <footer class="dashboard-footer">
             <div class="footer-nav">
