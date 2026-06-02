@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Nomad Guides 2026 | Productivity, Finance & Destinations | Neo-Nomad</title>
-    <meta name="description" content="In-depth guides for digital nomads: how to manage timezones, prevent burnout, handle finances abroad, and choose the best remote work destinations in 2026.">
+    <title>Digital Nomad Guides & Resources | Neo-Nomad</title>
+    <meta name="description" content="In-depth productivity, finance, remote setup, and visa guides built for digital nomads and remote workers traveling the world.">
     <meta name="author" content="Neo-Nomad Team">
     <link rel="canonical" href="https://nomad-schedule.pages.dev/guide.html">
 
-    <meta property="og:title" content="Digital Nomad Guides 2026 | Neo-Nomad Dashboard">
-    <meta property="og:description" content="Expert guides on nomad productivity, timezone management, financial planning, and top destinations for 2026.">
-    <meta property="og:type" content="article">
+    <meta property="og:title" content="Digital Nomad Guides & Resources">
+    <meta property="og:description" content="Productivity, finance, remote setup, and visa guides built for digital nomads.">
+    <meta property="og:type" content="website">
     <meta property="og:url" content="https://nomad-schedule.pages.dev/guide.html">
 
     <meta name="google-adsense-account" content="ca-pub-3114463937796990">
@@ -18,6 +18,59 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .directory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: var(--spacing-lg);
+            margin: var(--spacing-xl) 0;
+        }
+        .guide-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .guide-card {
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .guide-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--colors-accent);
+            box-shadow: var(--shadow-glow);
+        }
+        .guide-card-header h3 {
+            font-family: var(--font-heading);
+            font-size: 18px;
+            color: white;
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.4;
+        }
+        .guide-card-desc {
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--colors-text-secondary);
+            margin-bottom: var(--spacing-md);
+        }
+        .guide-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+            color: var(--colors-text-muted);
+            border-top: 1px solid var(--colors-border-light);
+            padding-top: var(--spacing-sm);
+            margin-top: auto;
+        }
+        .read-more-text {
+            color: var(--colors-accent);
+            font-weight: 600;
+            font-size: 12px;
+        }
+    </style>
 </head>
 <body>
     <div class="aura-background"></div>
@@ -35,11 +88,11 @@
         </nav>
 
         <header class="page-hero glass">
-            <h1>Digital Nomad Guides</h1>
+            <h1>Digital Nomad Guides &amp; Resources</h1>
             <p class="hero-subtitle">Practical, experience-backed advice for building a sustainable remote work lifestyle.</p>
         </header>
 
-        <!-- AdSense unit -->
+        <!-- AdSense auto ad unit -->
         <div class="adsense-unit">
             <ins class="adsbygoogle"
                  style="display:block"
@@ -50,193 +103,124 @@
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
 
-        <!-- Guide 1 -->
-        <article class="content-section glass article-full" id="guide-remote-setup">
-            <h2 class="section-title">🖥️ How to Build the Perfect Remote Work Setup (Anywhere in the World)</h2>
-            <p class="article-meta">Last updated: May 2026 &bull; 8 min read</p>
+        <section class="directory-grid">
+            <!-- Guide 1 -->
+            <a href="guide-timezone.html" class="guide-card-link">
+                <div class="card glass guide-card">
+                    <div class="guide-card-header">
+                        <h3>🕒 Mastering Timezone Management</h3>
+                    </div>
+                    <p class="guide-card-desc">
+                        One of the biggest hurdles for digital nomads is handling clients and meetings across multiple time zones. Discover anchor hours and synchronization hacks.
+                    </p>
+                    <div class="guide-card-footer">
+                        <span>5 min read &bull; Productivity</span>
+                        <span class="read-more-text">Read Guide &rarr;</span>
+                    </div>
+                </div>
+            </a>
 
-            <p>
-                Ask ten digital nomads what the most important investment in their remote work career was, and nine
-                will tell you: the gear. Not a specific laptop, or a particular pair of headphones, but the deliberate,
-                thoughtful construction of a portable work environment that performs reliably in wildly different
-                physical contexts.
-            </p>
+            <!-- Guide 2 -->
+            <a href="guide-focus.html" class="guide-card-link">
+                <div class="card glass guide-card">
+                    <div class="guide-card-header">
+                        <h3>🎯 Building a Daily Focus System</h3>
+                    </div>
+                    <p class="guide-card-desc">
+                        Work collapses without structure when surrounded by travel distractions. Learn daily missions, the Rule of 3, and browser time-blocking.
+                    </p>
+                    <div class="guide-card-footer">
+                        <span>6 min read &bull; Productivity</span>
+                        <span class="read-more-text">Read Guide &rarr;</span>
+                    </div>
+                </div>
+            </a>
 
-            <h3>The Minimum Viable Workspace</h3>
-            <p>
-                Before you optimize, you need a baseline. The minimum viable remote workspace — the kit that lets
-                you perform professionally in any environment — consists of just four items:
-            </p>
-            <ol>
-                <li><strong>A laptop with at least 8 hours of genuine battery life.</strong> Apple MacBook Air (M-series), Lenovo ThinkPad X1 Carbon, and Dell XPS 13 consistently top the rankings. Battery life claims from manufacturers are notoriously inflated; check independent reviews that test under real workloads.</li>
-                <li><strong>Noise-cancelling headphones.</strong> Sony WH-1000XM5 and Bose QuietComfort 45 remain the standards. Earbuds like Apple AirPods Pro are acceptable for calls but less effective for deep work in truly loud environments.</li>
-                <li><strong>A portable laptop stand.</strong> Neck and shoulder strain from laptop screens at desk height is one of the leading causes of nomad health issues. A foldable aluminum stand costs $25–$40 and transforms any surface into an ergonomic workstation.</li>
-                <li><strong>A universal travel power adapter with USB-C power delivery.</strong> The Anker PowerPort Atom III Slim can power a MacBook Pro at full speed while simultaneously charging three additional devices. One unit covers 200+ countries.</li>
-            </ol>
+            <!-- Guide 3 -->
+            <a href="guide-burnout.html" class="guide-card-link">
+                <div class="card glass guide-card">
+                    <div class="guide-card-header">
+                        <h3>💆 Preventing Nomad Burnout</h3>
+                    </div>
+                    <p class="guide-card-desc">
+                        Decision fatigue and isolation are real problems. Learn strategies like slow travel, location-agnostic habits, and digital disconnect hours.
+                    </p>
+                    <div class="guide-card-footer">
+                        <span>6 min read &bull; Wellness</span>
+                        <span class="read-more-text">Read Guide &rarr;</span>
+                    </div>
+                </div>
+            </a>
 
-            <h3>Connectivity: Your Most Critical Infrastructure</h3>
-            <p>
-                A stunning café with no reliable Wi-Fi is professionally worthless. Before committing to any workspace,
-                test the connection with a tool like Fast.com or Speedtest. For video calls, you need a minimum of
-                3Mbps upload speed; for file transfers and cloud sync, aim for 10Mbps or above.
-            </p>
-            <p>
-                Always carry a backup: a local SIM with a data plan, or an eSIM through services like Airalo or Holafly.
-                In Southeast Asia and most of Europe, local SIMs are both cheap and fast. In some African and Latin
-                American countries, a local SIM can dramatically outperform the Wi-Fi at your accommodation.
-            </p>
+            <!-- Guide 4 -->
+            <a href="guide-finance.html" class="guide-card-link">
+                <div class="card glass guide-card">
+                    <div class="guide-card-header">
+                        <h3>💹 Financial &amp; Tax Toolkit</h3>
+                    </div>
+                    <p class="guide-card-desc">
+                        Taxes, currency rates, cost of living, and global banking. How to budget and manage expenses while invoice-processing from abroad.
+                    </p>
+                    <div class="guide-card-footer">
+                        <span>7 min read &bull; Finance</span>
+                        <span class="read-more-text">Read Guide &rarr;</span>
+                    </div>
+                </div>
+            </a>
 
-            <h3>Managing Your Digital Environment</h3>
-            <p>
-                Your software setup matters as much as your hardware. Use cloud-sync tools so your work is accessible
-                from any device: Google Drive or OneDrive for documents, GitHub or GitLab for code, and Notion or
-                Obsidian for notes. The goal is that if your laptop is stolen — a real nomad risk — you can continue
-                working within 24 hours on a replacement device.
-            </p>
-            <p>
-                Enable two-factor authentication on every service that supports it. Use a password manager like 1Password
-                or Bitwarden. Public Wi-Fi is genuinely risky; a reputable VPN (Mullvad, ProtonVPN) is a reasonable
-                precaution for sensitive work, though it won't protect against all threats.
-            </p>
-        </article>
+            <!-- Guide 5 -->
+            <a href="guide-remote-setup.html" class="guide-card-link">
+                <div class="card glass guide-card">
+                    <div class="guide-card-header">
+                        <h3>🖥️ The Perfect Remote Work Setup</h3>
+                    </div>
+                    <p class="guide-card-desc">
+                        Build a minimum viable workspace. Laptop recommendations, travel adapter configurations, connectivity checks, and backup cloud architectures.
+                    </p>
+                    <div class="guide-card-footer">
+                        <span>8 min read &bull; Gear</span>
+                        <span class="read-more-text">Read Guide &rarr;</span>
+                    </div>
+                </div>
+            </a>
 
-        <!-- Guide 2 -->
-        <article class="content-section glass article-full" id="guide-client-communication">
-            <h2 class="section-title">📬 Client Communication Across Time Zones: A Practical Handbook</h2>
-            <p class="article-meta">Last updated: May 2026 &bull; 6 min read</p>
+            <!-- Guide 6 -->
+            <a href="guide-client-communication.html" class="guide-card-link">
+                <div class="card guide-card-link">
+                    <div class="card glass guide-card">
+                        <div class="guide-card-header">
+                            <h3>📬 Client Communication Handbook</h3>
+                        </div>
+                        <p class="guide-card-desc">
+                            Communication delays build anxiety and cost contracts. Establish response windows and learn to use asynchronous tools like Loom and Notion.
+                        </p>
+                        <div class="guide-card-footer">
+                            <span>6 min read &bull; Freelancing</span>
+                            <span class="read-more-text">Read Guide &rarr;</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
 
-            <p>
-                The most common professional complaint from digital nomad clients is not about the quality of work —
-                it's about communication delays and uncertainty. When your client in London doesn't know whether
-                you're sleeping, working, or traveling, anxiety fills the gap. Anxiety erodes trust. Lost trust
-                costs contracts.
-            </p>
-            <p>
-                The solution isn't working more hours. It's building communication structures that make your
-                availability and work status transparent without requiring constant check-ins.
-            </p>
+            <!-- Guide 7 -->
+            <a href="guide-visa.html" class="guide-card-link">
+                <div class="card glass guide-card">
+                    <div class="guide-card-header">
+                        <h3>🛂 Digital Nomad Visas in 2026</h3>
+                    </div>
+                    <p class="guide-card-desc">
+                        Compare requirements, duration, and income requirements for over 50 countries including Portugal, Spain, Mexico, Georgia, and Bali.
+                    </p>
+                    <div class="guide-card-footer">
+                        <span>10 min read &bull; Visas</span>
+                        <span class="read-more-text">Read Guide &rarr;</span>
+                    </div>
+                </div>
+            </a>
+        </section>
 
-            <h3>Set Expectations Upfront, Not After Problems</h3>
-            <p>
-                Before you take any remote client work, establish and document your working parameters: your typical
-                response window (e.g., "I respond to messages within 4 hours during my working day, which runs
-                09:00–18:00 in whatever timezone I'm currently in"), your anchor hours for synchronous availability,
-                and your policy on urgent requests outside those windows.
-            </p>
-            <p>
-                Most clients don't need you available 24/7 — they need predictability. A written statement of
-                your working parameters, agreed upon at the contract stage, prevents 90% of the friction that
-                nomads attribute to "timezone differences."
-            </p>
-
-            <h3>Asynchronous Communication Tools That Actually Work</h3>
-            <p>
-                Email remains the most reliable asynchronous channel for formal client communication. Loom for
-                screen-recorded video updates (particularly effective for showing design progress or explaining
-                code), Slack for casual team communication, and Notion or Confluence for shared documentation.
-            </p>
-            <p>
-                The key discipline: when you send an asynchronous update, include all the context the recipient needs
-                to understand it without a follow-up question. A Loom video that shows the screen, explains what you
-                built and why, and notes the next decision required eliminates an entire back-and-forth email thread.
-            </p>
-
-            <h3>When to Schedule Live Calls</h3>
-            <p>
-                Synchronous calls should be reserved for decisions that genuinely require discussion, relationship-building
-                moments, and ambiguous situations where tone and nuance matter. Use the World Times widget to find
-                overlap windows before proposing times, and always propose at least two options across different
-                days to accommodate your client's schedule.
-            </p>
-        </article>
-
-        <!-- Guide 3 -->
-        <article class="content-section glass article-full" id="guide-visa">
-            <h2 class="section-title">🛂 Digital Nomad Visas in 2026: The Complete Country Guide</h2>
-            <p class="article-meta">Last updated: May 2026 &bull; 10 min read</p>
-
-            <p>
-                The proliferation of dedicated digital nomad visa programs since 2020 has been one of the most
-                significant developments in remote work policy worldwide. More than 50 countries now offer some
-                form of long-stay visa or residency permit designed specifically for location-independent workers.
-                Understanding your options dramatically expands both your freedom and your legal protection.
-            </p>
-
-            <h3>Why Visa Status Matters for Nomads</h3>
-            <p>
-                Many digital nomads operate in a legal gray zone: they enter countries as tourists and work remotely
-                for non-local clients, technically violating the terms of tourist visas that prohibit "working"
-                while in the country — even if the income comes from abroad. Dedicated nomad visas eliminate this
-                ambiguity and provide legal clarity, tax benefits in some jurisdictions, and access to local banking.
-            </p>
-
-            <h3>Top Digital Nomad Visa Programs in 2026</h3>
-            <div class="visa-table-wrapper">
-                <table class="visa-table">
-                    <thead>
-                        <tr>
-                            <th>Country</th>
-                            <th>Program Name</th>
-                            <th>Duration</th>
-                            <th>Min. Income Req.</th>
-                            <th>Key Benefit</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>🇵🇹 Portugal</td>
-                            <td>D8 Digital Nomad Visa</td>
-                            <td>1 year, renewable</td>
-                            <td>€3,040/month</td>
-                            <td>EU access, NHR tax regime</td>
-                        </tr>
-                        <tr>
-                            <td>🇬🇪 Georgia</td>
-                            <td>Remotely from Georgia</td>
-                            <td>365 days</td>
-                            <td>$2,000/month</td>
-                            <td>1% tax for individual entrepreneurs</td>
-                        </tr>
-                        <tr>
-                            <td>🇪🇸 Spain</td>
-                            <td>Digital Nomad Visa</td>
-                            <td>1 year (up to 5 yrs)</td>
-                            <td>€2,160/month</td>
-                            <td>Beckham Law tax advantage</td>
-                        </tr>
-                        <tr>
-                            <td>🇲🇽 Mexico</td>
-                            <td>Temporary Resident Visa</td>
-                            <td>1–4 years</td>
-                            <td>~$2,600/month</td>
-                            <td>No income tax on foreign earnings</td>
-                        </tr>
-                        <tr>
-                            <td>🇮🇩 Indonesia</td>
-                            <td>E33G Second Home Visa</td>
-                            <td>5 years</td>
-                            <td>$130K bank balance</td>
-                            <td>Long stay, no local tax on foreign income</td>
-                        </tr>
-                        <tr>
-                            <td>🇦🇪 UAE</td>
-                            <td>Remote Work Visa</td>
-                            <td>1 year</td>
-                            <td>$5,000/month</td>
-                            <td>0% income tax, Dubai lifestyle</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p class="article-note">
-                <strong>Disclaimer:</strong> Visa requirements, income thresholds, and program availability change frequently.
-                Always verify current requirements directly with official government sources or a qualified immigration
-                attorney before making any relocation decisions.
-            </p>
-        </article>
-
-        <!-- AdSense mid-content -->
-        <div class="adsense-unit adsense-mid">
+        <!-- AdSense unit -->
+        <div class="adsense-unit">
             <ins class="adsbygoogle"
                  style="display:block; text-align:center;"
                  data-ad-client="ca-pub-3114463937796990"
